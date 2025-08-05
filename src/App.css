@@ -1,0 +1,328 @@
+/* === Base Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #0f0f0f, #1a1a1a);
+  color: #eaeaea;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+} */
+body {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #0f0f0f, #1a1a1a);
+  color: #eaeaea;
+  line-height: 1.9;
+  scroll-behavior: smooth;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+/* === Enhanced Fixed Navbar === */
+.navbar {
+  
+  padding: 20px 40px; /* Increased vertical padding */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  transition: background 0.3s ease;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #00ffd5 !important;
+  text-transform: uppercase;
+}
+
+.logo-img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.navbar-nav {
+  gap: 1.2rem;
+}
+
+.nav-link {
+  color: #ffffff !important;
+  
+  font-weight: 500;
+ font-size: 1.15rem; /* Increased nav link font size */
+  padding: 10px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #0dcaf0 !important;
+  background-color: rgba(255, 255, 255, 0.06);
+  text-decoration: none;
+  backdrop-filter: blur(4px);
+}
+
+/* === Home Section === */
+.home-section {
+  height: 100vh;
+  background: linear-gradient(135deg, #0d1117, #1f2937);
+  color: #f8f9fa;
+  padding: 100px 20px 60px; /* top padding for fixed navbar */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: fadeIn 1s ease-in;
+}
+
+.home-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.highlight-name {
+  color: #00ffd5;
+  text-shadow: 0 0 10px rgba(0, 255, 213, 0.7);
+}
+
+.home-subtitle {
+  font-size: 1.25rem;
+  color:white;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.btn-outline-light {
+  border: 2px solid #00ffd5;
+  color: #00ffd5;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+.btn-outline-light:hover {
+  background-color: #00ffd5;
+  color: #000;
+}
+
+/* === Section Titles === */
+.section-heading {
+  font-size: 2.5rem;
+  color: #00bfa6;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.section-description {
+  font-size: 1.125rem;
+  color: #bbbbbb;
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+/* === About Section === */
+/* AboutMe.css */
+
+.custom-box {
+  background-color: #121212;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+  color: #ccc;
+  line-height: 1.8;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.custom-box:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.25);
+}
+
+#about-me h2,
+#about-me h3,
+#about-me h4 {
+  letter-spacing: 0.5px;
+}
+
+#about-me p {
+  margin-bottom: 1rem;
+}
+
+/* === Skills Section === */
+.skills-section {
+  background-color: #1b1b1b;
+  padding: 4rem 0;
+  color: #eaeaea;
+}
+
+.skill-card {
+  background-color: #1f1f1f;
+  border: 1px solid #333;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  padding: 1rem;
+}
+
+.skill-card:hover {
+  background-color: #242424;
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 191, 166, 0.2);
+}
+
+.skill-name {
+  font-size: 1rem;
+  color: #dddddd;
+}
+
+.text-skill {
+  color: #00bfa6;
+}
+
+/* === Resume Section (Vertical Line) === */
+.vertical-line {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.vertical-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 3px;
+  background-color: rgba(13, 110, 253, 0.6);
+}
+
+.text-muted-light {
+  color: #cccccc !important;
+}
+
+/* === Project Cards === */
+.project-card {
+  background-color: #1f1f1f;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 1rem;
+  color: #eaeaea;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  background-color: #262626;
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0, 191, 166, 0.3);
+}
+
+.project-title {
+  font-size: 1.25rem;
+  color: #00bfa6;
+  font-weight: 600;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #cccccc;
+  margin-top: 0.5rem;
+}
+
+/* === Certificates === */
+.certificates-wrapper {
+  background: #f8f9fa;
+  padding: 60px 0;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0d6efd;
+}
+
+.section-subtitle {
+  color: #6c757d;
+  font-size: 1.05rem;
+}
+
+.cert-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  padding: 20px;
+}
+
+.cert-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.cert-card .card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #343a40;
+}
+
+.cert-card .card-text {
+  color: #555;
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+
+/* === Section Title Block === */
+.section-title h2 {
+  font-size: 2.25rem;
+  color: #00bfa6;
+}
+
+.section-title p {
+  font-size: 1.05rem;
+  max-width: 700px;
+  margin: auto;
+  color: #bbbbbb;
+}
+
+/* === Contact === */
+/* Contact.css */
+
+.contact-section {
+  background-color: #1c1c1c;
+}
+
+.contact-info-box {
+  background-color: #121212;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.08);
+  color: #ccc;
+}
+
+.contact-info li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1.05rem;
+}
+
+.contact-form-box {
+  background-color: #121212;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.08);
+}
+
+.response-message {
+  font-weight: 500;
+  color: #0dcaf0;
+}
+
