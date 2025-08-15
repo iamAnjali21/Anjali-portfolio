@@ -3,10 +3,10 @@ function Footer () {
     return(
    
       <div className="context">
-  <footer id="footer" class="footer position-relative light-background">
+  <footer id="footer" className="footer position-relative light-background">
 
-    <div class="container">
-      <div class="copyright text-center ">
+    <div className="container">
+      <div classNameName="copyright text-center ">
         <p>
       Connect with me on 
       <a href="https://www.linkedin.com/in/iamanjali21/" target="_blank" rel="noreferrer"> LinkedIn</a>

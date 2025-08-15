@@ -1,32 +1,32 @@
 import { useState } from "react";
-
+import axios from "axios";
 
 function Contact() {
-  const [response, setResponse] = useState("");
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  // const [response, setResponse] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const name = e.target.name.value.trim();
-    const email = e.target.email.value.trim();
-    const message = e.target.message.value.trim();
-
-    if (!name || !email || !message) {
-      setResponse("⚠️ Please fill in all fields.");
-      return;
-    }
-
-    const emailRegex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
-    if (!emailRegex.test(email)) {
-      setResponse("❌ Please enter a valid email address.");
-      return;
-    }
-
-    setResponse("✅ Thank you for your message!");
-    e.target.reset();
+  const handleChange = e => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handleSubmit = async e => {
+  e.preventDefault();
+  try {
+    await axios.post("http://localhost:5000/send-email", formData);
+    //setResponse("✅ Message sent!");
+    alert("✅ Your message was sent successfully!");
+    setFormData({ name: "", email: "", message: "" }); // Optional: clear form
+    // setResponse(""); // Clear response message
+  }
+   catch (error) {
+    
+    alert("❌ Failed to send your message. Please try again.");
+  }
+};
+
+
   return (
-    <section id="contact" className="contact-section py-5 bg-dark text-light">
+    <section id="contact" className="contact-section py-5 text-light">
       <div className="container">
         <div className="text-center mb-5">
           <h2 className="text-info fw-bold">📬Contact Me</h2>
@@ -49,28 +49,45 @@ function Contact() {
             <form onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label htmlFor="name" className="form-label">Your Name</label>
-                <input type="text" name="name" className="form-control" placeholder="John Doe" required />
+<input
+  type="text"
+  name="name"
+  value={formData.name}
+  onChange={handleChange}
+  className="form-control"
+  placeholder="John Doe"
+  required
+/>
               </div>
 
               <div className="mb-3">
                 <label htmlFor="email" className="form-label">Your Email</label>
-                <input type="email" name="email" className="form-control" placeholder="name@example.com" required />
-              </div>
+<input
+  type="email"
+  name="email"
+  value={formData.email}
+  onChange={handleChange}
+  className="form-control"
+  placeholder="name@example.com"
+  required
+/>              </div>
 
               <div className="mb-3">
                 <label htmlFor="message" className="form-label">Message</label>
-                <textarea name="message" rows="5" className="form-control" placeholder="Type your message here..." required></textarea>
-              </div>
+<textarea
+  name="message"
+  rows="5"
+  value={formData.message}
+  onChange={handleChange}
+  className="form-control"
+  placeholder="Type your message here..."
+  required
+></textarea>              </div>
 
               <div className="text-start">
                 <button type="submit" className="btn btn-info text-white">Send Message</button>
               </div>
 
-              {response && (
-                <div className="mt-3">
-                  <p className="response-message">{response}</p>
-                </div>
-              )}
             </form>
           </div>
         </div>
