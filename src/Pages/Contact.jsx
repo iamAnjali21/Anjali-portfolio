@@ -16,7 +16,7 @@ function Contact() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/send-email",
+        "https://portfolio-backend-cqql.onrender.com/send-email", // Update with your backend URL
         formData,
         { headers: { "Content-Type": "application/json" } } // ensure JSON
       );
