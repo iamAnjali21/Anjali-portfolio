@@ -7,7 +7,7 @@ function Project() {
       timeframe: "Jul 2024 – Aug 2024",
       description:
         "Developed a responsive e-commerce platform using React.js, Bootstrap, and CSS. Implemented product listings, dynamic rendering, and cart functionality.",
-      link: "https://shandmade-craft-vh12.vercel.app/",
+      link: "https://handmade-craft-58zj.vercel.app/",
       github: "https://github.com/iamAnjali21/HandmadeCraft",
       tech: ["React.js", "Bootstrap", "CSS"],
     },
