@@ -20,7 +20,7 @@ function Home() {
                 View Projects →
               </a>
               <a
-                href="/resume.pdf"
+                href="/resume1.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary px-4 py-2"
