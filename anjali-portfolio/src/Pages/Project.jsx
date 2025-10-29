@@ -12,19 +12,12 @@ function Project() {
       tech: ["React.js", "Bootstrap", "CSS"],
     },
     {
-      title: "Pet Care Management System",
-      timeframe: "Nov 2024 – Dec 2024",
+      title: "Star Rating App",
+      timeframe: "Jan 2025 – Mar 2025",
       description:
-        "Built a Java-based desktop application using JDBC and MySQL to manage pet appointments and medical records. Supported full CRUD operations with data validation.",
+        "Interactive web app built with React that lets users rate items using a 5-star system. Features real-time feedback, smooth animations, and responsive design for seamless user experience.",
       github: "https://github.com/your-username/pet-care-management",
-      tech: ["Java", "JDBC", "MySQL"],
-    },
-    {
-      title: "Weather App",
-      description:
-        "React-based weather forecast app using OpenWeatherMap API. Features dynamic background themes and responsive UI updates.",
-      github: "https://github.com/your-username/weather-app",
-      tech: ["React.js", "OpenWeatherMap API"],
+      tech: [ "React.js","Node.js","express.js","MYSQL" ],
     },
     {
       title: "Calculator App",
@@ -41,6 +34,13 @@ function Project() {
       github: "https://github.com/iamAnjali21/Quiz_App",
       tech: ["HTML", "JavaScript", "CSS"],
     },
+    {
+      title: "Visual Product Matcher",
+      description:" AI-powered web application that identifies and matches visually similar products from uploaded images. Built with a React frontend and Node.js backend, featuring an image detection model for accurate matching and responsive design.",
+      link: "https://image-matcher-jade.vercel.app/",
+      github: "https://github.com/iamAnjali21/Visual_matcher",
+      tech: ["React.js", "Node.js", "CSS", "AI Image Detection"],
+    }
   ];
 
   return (
