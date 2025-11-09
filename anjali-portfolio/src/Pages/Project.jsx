@@ -30,7 +30,7 @@ function Project() {
       title: "Quiz App",
       description:
         "A responsive quiz app built with React that tracks scores and provides instant feedback on answer selection.",
-      link: "https://your-quiz-app-link.com",
+      link: "https://your-quiz-app-link.com/",
       github: "https://github.com/iamAnjali21/Quiz_App",
       tech: ["HTML", "JavaScript", "CSS"],
     },
